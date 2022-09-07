@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PhoneController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('phone', PhoneController::class);
+
+/**
+ * Middleware Laravel Sanctum used here
+ */
+//Route::middleware('laravel:sanctum')->resource('posts', PostController::class);
+
+//Not used here
+Route::resource('posts', PostController::class);
